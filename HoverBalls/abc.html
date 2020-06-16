@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Canvas demo</title>
+<style type="text/css">
+    #canvasSection{ position:fixed;}
+</style>
+<script type="text/javascript">
+function draw()
+{
+
+//paint the text
+var canvas = document.getElementById('canvasSection');
+var context = canvas.getContext('2d');
+
+context.fillStyle    = '#00f';
+context.font         = 'italic 30px sans-serif';
+context.textBaseline = 'top';
+context.font         = 'bold 30px sans-serif';
+context.strokeText('Your Text!!', 0, 0);
+
+//paint the square
+
+var canvasSquare = document.getElementById('canvasSquare');
+var ctxSquare = canvas.getContext('2d');
+
+ctxSquare.fillStyle='#FF0000';
+ctxSquare.fillRect(0, 100,50,100);
+}
+</script>
+</head>
+<body onLoad="draw()">
+<canvas id="canvasSection">Error, canvas is not supported</canvas>
+<div>TestText</div>
+</body>
+</html>
